@@ -1,0 +1,176 @@
+/*.item_desc 스크롤 */
+@keyframes desc_scroll {
+    0% {
+        top: 100px;
+        opacity: 0;
+    }
+
+    100% {
+        top: 60px;
+        opacity: 1;
+    }
+}
+
+@keyframes desc_scroll_back {
+    0% {
+        top: 60px;
+        opacity: 1;
+    }
+
+    100% {
+        top: 100px;
+        opacity: 0;
+    }
+}
+/*.item_desc 스크롤 끝*/
+
+/*.McChon 스크롤 시작*/
+@keyframes McChon_scroll {
+    0% {
+        top: 50px;
+        opacity: 0;
+    }
+
+    100% {
+        top: 0px;
+        opacity: 1;
+    }
+}
+
+@keyframes McChon_scroll_back {
+    0% {
+        top: 0px;
+        opacity: 1;
+    }
+
+    100% {
+        top: 50px;
+        opacity: 0;
+    }
+}
+
+@keyframes McChontext_scroll {
+    0% {
+        left: -50px;
+        opacity: 0;
+    }
+
+    100% {
+        left: 0px;
+        opacity: 1;
+    }
+}
+
+@keyframes McChontext_scroll_back {
+    0% {
+        left: 0px;
+        opacity: 1;
+    }
+
+    100% {
+        left: -50px;
+        opacity: 0;
+    }
+}
+/*.McChon 스크롤 끝*/
+
+/*.Tweed 스크롤 시작*/
+@keyframes Tweed_scroll {
+    0% {
+        left: 0px;
+        opacity: 0;
+    }
+
+    100% {
+        left: 80px;
+        opacity: 1;
+    }
+}
+
+@keyframes Tweed_scroll_back {
+    0% {
+        left: 80px;
+        opacity: 1;
+    }
+
+    100% {
+        left: 0px;
+        opacity: 0;
+    }
+}
+
+@keyframes Tweedtext_scroll {
+    0% {
+        left: -80px;
+        opacity: 0;
+    }
+
+    100% {
+        left: 0px;
+        opacity: 1;
+    }
+}
+
+@keyframes Tweedtext_scroll_back {
+    0% {
+        left: 0px;
+        opacity: 1;
+    }
+
+    100% {
+        left: -80px;
+        opacity: 0;
+    }
+}
+/*.Tweed 스크롤 끝*/
+
+/*.Luz_Bag 스크롤 시작*/
+@keyframes Luz_Bag_scroll {
+    0% {
+        right: -80px;
+        opacity: 0;
+    }
+
+    100% {
+        right: 0px;
+        opacity: 1;
+    }
+}
+
+@keyframes Luz_Bag_scroll_back {
+    0% {
+        right: 0px;
+        opacity: 1;
+    }
+
+    100% {
+        right: -80px;
+        opacity: 0;
+    }
+}
+
+@keyframes Luz_Bag_text_scroll {
+    0% {
+        right: -500px;
+        opacity: 0;
+    }
+
+    100% {
+        right: 0px;
+        opacity: 1;
+    }
+}
+
+@keyframes Luz_Bag_text_scroll_back {
+    0% {
+        right: 0px;
+        opacity: 1;
+    }
+
+    100% {
+        right: -500px;
+        opacity: 0;
+    }
+}
+/*.McChon 스크롤 끝*/
+

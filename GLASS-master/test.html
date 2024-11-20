@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>드롭다운 메뉴 예제</title>
+  <style>
+    /* 기본 스타일 설정 */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f3f3f3;
+    }
+
+    /* 상단 메뉴 */
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      padding: 10px 40px;
+      background-color: #fff;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .header .menu-button {
+      font-size: 16px;
+      color: black;
+      cursor: pointer;
+      position: relative;
+    }
+
+    /* 드롭다운 스타일 */
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      top: 40px;
+      left: 0;
+      width: 100vw;
+      background-color: #f9f9f9;
+      padding: 40px;
+      display: flex;
+      justify-content: center;
+      gap: 60px;
+    }
+
+    .dropdown-column {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .dropdown-column h4 {
+      color: #888;
+      font-weight: normal;
+      font-size: 14px;
+    }
+
+    .dropdown-column a {
+      text-decoration: none;
+      color: black;
+      font-size: 16px;
+    }
+
+    .dropdown-column a:hover {
+      text-decoration: underline;
+    }
+
+    .dropdown-image {
+      width: 200px;
+      text-align: center;
+    }
+
+    .dropdown-image img {
+      width: 100%;
+      height: auto;
+      border-radius: 5px;
+    }
+
+    /* 드롭다운 표시 */
+    .header .menu-button.active + .dropdown-content {
+      display: flex;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <div class="menu-button" onclick="toggleDropdown()">MENU &#9650;</div>
+    <div class="logo">GLASS</div>
+    <div class="header-links">
+      <a href="#">LOGIN</a> |
+      <a href="#">SEARCH</a> |
+      <a href="#">CART</a>
+    </div>
+  </div>
+
+  <div class="dropdown-content">
+    <div class="dropdown-column">
+      <a href="#">New Arrivals</a>
+      <a href="#">Best Sellers</a>
+      <a href="#">Coming Soon</a>
+      <a href="#">On Sale</a>
+    </div>
+    <div class="dropdown-column">
+      <h4>Category</h4>
+      <a href="#">All</a>
+      <a href="#">Outwears</a>
+      <a href="#">Tops</a>
+      <a href="#">Dresses</a>
+      <a href="#">Pants & Shorts</a>
+      <a href="#">Skirts</a>
+      <a href="#">Accessories</a>
+    </div>
+    <div class="dropdown-column">
+      <a href="#">About Us</a>
+      <a href="#">Archive</a>
+      <a href="#">Notice</a>
+      <a href="#">Q&A</a>
+      <a href="#">Review</a>
+    </div>
+    <div class="dropdown-image">
+      <img src="https://via.placeholder.com/200" alt="Example Image">
+      <div>Tops</div>
+      <a href="#">Shop Now</a>
+    </div>
+  </div>
+
+  <script>
+    function toggleDropdown() {
+      const menuButton = document.querySelector('.menu-button');
+      menuButton.classList.toggle('active');
+    }
+    
+    // 드롭다운 외부를 클릭했을 때 닫히도록 설정
+    window.addEventListener('click', function(event) {
+      const dropdown = document.querySelector('.dropdown-content');
+      const menuButton = document.querySelector('.menu-button');
+      if (!menuButton.contains(event.target) && !dropdown.contains(event.target)) {
+        menuButton.classList.remove('active');
+      }
+    });
+  </script>
+</body>
+</html>

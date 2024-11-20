@@ -1,0 +1,803 @@
+body {
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+    width: 100vw;
+}
+
+ /* 상단 메뉴 */
+ .header {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 90vw;
+    z-index: 3;
+}
+
+.header .logo{
+    position: fixed;
+    top: 30px;
+    left: 865px;
+    font-size: 70px;
+    font-family: "Bellefair", serif;
+    font-weight: 400;
+    font-style: normal;
+    text-transform: uppercase;
+    z-index: 3;
+}
+
+.header .header-links a{
+    position: relative;
+    top: 80px;
+    left: 1500px;
+    margin: 20px;
+    font-size: 12px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    color: #111111;
+    font-style: normal;
+    text-decoration: none;
+    z-index: 3;
+}
+
+@media screen and (min-width:1920px){
+    .header .m_header-links a {
+        display: none;
+    }
+    
+    .dropdown .m_header_login_search {
+        display: none;
+    }
+}
+  /* 드롭다운 스타일 */
+
+.dropdown .menu-button {
+    position: fixed;
+    top: 80px;
+    left: 100px;
+    cursor: pointer;
+    z-index: 3;
+}
+
+.dropdown-contents {
+    display: none;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 1920px;
+    height: 800px;
+    background-color: #f9f9f9;
+    z-index: 2;
+}
+
+.dropdown:hover .dropdown-contents {
+    display: block;
+}
+  
+.dropdown-content1 a {
+    display: block;
+    position: relative;
+    top: 132px;
+    left: 356px;
+    line-height: 20px;
+    color: #111111;
+    font-size: 12px;
+    text-decoration: none;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+}
+
+.dropdown-content2 a {
+    display: block;
+    position: relative;
+    top: 45px;
+    left: 659px;
+    font-size: 12px;
+    line-height: 20px;
+    color: #111111;
+    text-decoration: none;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+}
+
+.dropdown-content3 span {
+    position: relative;
+    top: 120px;
+    left: 356px;
+    color: #888888;
+    font-size: 12px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+}
+
+.dropdown-content3 a {
+    display: block;
+    position: relative;
+    top: 150px;
+    left: 356px;
+    font-size: 12px;
+    line-height: 20px;
+    color: #111111;
+    text-decoration: none;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+}
+
+.dropdown-contents a:hover {
+    color: #888;
+}
+
+.dropdown-Image img {
+    position: absolute;
+    top: 145px;
+    left: 1261px;
+    width: 295px;
+    height: 399px;
+}
+
+.dropdown-Image span {
+    position: relative;
+    top: 220px;
+    left: 1261px;
+    font-size: 14px;
+    color: #111111;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+}
+
+.dropdown-Image p {
+    position: relative;
+    top: 215px;
+    left: 1261px;
+    font-size: 11px;
+    color: #888888;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+}
+
+.header .caret-up {
+    position: absolute;
+    top: 98px;
+    left: 90px;
+    transform: rotate(180deg);
+    cursor: pointer;
+}
+
+.dropdown .blur-background {
+    position: fixed;
+    top: 800px;
+    left: 0;
+    width: 1920px;
+    height: 300px;
+    background: rgba(255, 255, 255, 0.178);
+    backdrop-filter: blur(5px);
+    display: block;
+}
+
+
+.dropdown .Event_banner {
+    position: absolute;
+    top: 160px;
+    left: 1250px;
+}
+
+.dropdown .Event_banner img {
+    width: 300px;
+    height: 390px;
+}
+
+.dropdown .Event_banner span {
+    position: absolute;
+    top: 410px;
+    left: 0px;
+    font-size: 14px;
+    color: #111111;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    text-transform: capitalize;
+}
+
+.dropdown .Event_banner p {
+    position: relative;
+    top: 30px;
+    font-size: 11px;
+    color: #888888;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+}
+
+
+.slider-container {
+    top: -55px;
+    width: 1920px;
+    height: 879px;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+}
+
+.slider {
+    display: flex;
+    transition: transform 1s ease;
+}
+
+.slide {
+    min-width: 100%;
+    height: 100%;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.desc p {
+    position: relative;
+    top: -60px;
+    left: 30px;
+    font-size: 22px;
+    font-family: "Bellefair", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/*.item_desc 스타일 값 시작*/
+.item_desc {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3,0fr);
+    top: 100px;
+    gap: 150px;
+    opacity: 0;
+}
+
+
+.item_desc img {
+    position: relative;
+    left: 380px;
+    width: 293px;
+    height: 389px;
+    gap: 10px;
+}
+
+
+.Monroe h1 {
+    position: relative;
+    top: 520px;
+    left: 460px;
+    font-size: 14px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.Monroe del {
+    position: relative;
+    color: #555555;
+    top: 510px;
+    left: 490px;
+    font-size: 12px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.Monroe ins {
+    position: relative;
+    top: 510px;
+    left: 480px;
+    text-decoration: none;
+    font-size: 12px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.Monroe span {
+    display: block;
+    position: relative;
+    top: 495px;
+    left: 550px;
+    color: #bf2d0c;
+    font-size: 12px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+}
+
+.Shirtdress img {
+    position: relative;
+    top: 50px;
+}
+
+.Shirtdress h1 {
+    position: relative;
+    top: 520px;
+    left: 475px;
+    font-size: 14px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.Shirtdress p {
+    position: relative;
+    top: 520px;
+    left: 495px;
+    color: #555555;
+    font-size: 12px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.Duncan img {
+    position: relative;
+    top: 13px;
+}
+
+.Duncan h1 {
+    position: relative;
+    top: 520px;
+    left: 485px;
+    font-size: 14px;
+    color: #111111;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    z-index: 2;
+}
+
+.Duncan del {
+    position: relative;
+    top: 510px;
+    left: 490px;
+    font-size: 12px;
+    color: #555555;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+ .Duncan ins {
+    position: relative;
+    top: 510px;
+    left: 485px;
+    text-decoration: none;
+    font-size: 12px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.Duncan .discount {
+    position: relative;
+    top: 510px;
+    left: 485px;
+    color: #bf2d0c;
+    font-size: 12px;
+    font-weight: 300;
+    font-family: "Roboto", sans-serif;
+}
+/*.item_desc 스타일 값 끝*/
+
+.McCahon {
+    position: absolute;
+    top: 2000px;
+    left: 300px;
+}
+
+.McCahon img {
+    opacity: 0;
+    position: relative;
+    top: 50px;
+    left: 80px;
+    width: 835px;
+    height: 571px;
+}
+
+.McCahon_text {
+    position: relative;
+    top: 0px;
+    left: -50px;
+    opacity: 0;
+}
+
+.McCahon h1 {
+    position: relative;
+    top: 00px;
+    left: 80px;
+    font-size: 14px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+}
+
+.McCahon p {
+    position: relative;
+    top: -5px;
+    left: 80px;
+    color: #555555;
+    font-size: 12px;  
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+}
+
+.Tweed {
+    position: absolute;
+    top: 2900px;
+    left: 300px;
+}
+
+.Tweed img {
+    opacity: 0;
+    position: relative;
+    left: 0px;
+    width: 462px;
+    height: 476px;
+}
+
+.Tweed_text {
+    opacity: 0;
+    position: relative;
+    left: -80px;
+}
+
+.Tweed h1 {
+    position: relative;
+    left: 80px;
+    font-size: 14px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+}
+
+.Tweed p {
+    position: relative;
+    left: 80px;
+    font-size: 12px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    color: #555555;
+}
+
+.Luz_Bag {
+    position: absolute;
+    top: 2900px;
+    left: 1050px;
+}
+
+.Luz_Bag img {
+    opacity: 0;
+    position: relative;
+    right: -80px;
+    width: 592px;
+    height: 833px;
+}
+
+.Luz_Bag_text {
+    opacity: 0;
+    position: relative;
+    right: -500px;
+}
+
+.Luz_Bag h1 {
+    font-size: 14px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+}
+
+.Luz_Bag p {
+    font-size: 12px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    color: #555555;
+}
+
+.Archive {
+    position: absolute;
+    top: 4200px;
+    height: 1000px;
+    left: 300px;
+}
+
+.Archive h1 {
+    position: absolute;
+    top: 0px;
+    font-size: 30px;
+    font-family: "Bellefair", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.Archive .Boundaries {
+    position: relative;
+    top: 15px;
+    left: 350px;
+    cursor: pointer;
+}
+
+.Boundaries p {
+    font-size: 14px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    color: #555555;
+}
+
+.Boundaries span {
+    position: relative;
+    top: -10px;
+    font-size: 12px;
+    line-height: 1em;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    color: #888;
+}
+
+.B_img {
+    opacity: 0;
+    position: absolute;
+    top: 0px;
+    left: 600px;
+    width: 320px;
+    height: 500px;
+    transition: opacity 0.3s ease; 
+}
+
+.Boundaries:hover .B_img {
+    opacity: 1;
+}
+
+.Archive .The_McCahon {
+    position: relative;
+    top: 50px;
+    left: 350px;
+    cursor: pointer;
+}
+
+.The_McCahon p {
+    font-size: 14px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    color: #555555;
+}
+
+.The_McCahon span {
+    position: relative;
+    top: -10px;
+    font-size: 12px;
+    line-height: 1em;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    color: #888;
+}
+
+.Mc_img {
+    opacity: 0;
+    position: absolute;
+    top: -100px;
+    left: 600px;
+    width: 350px;
+    height: 250px;
+    transition: opacity 0.3s ease; 
+}
+
+.The_McCahon:hover .Mc_img {
+    opacity: 1;
+}
+
+.Archive .The_Markers {
+    position: relative;
+    top: 100px;
+    left: 350px;
+    cursor: pointer;
+}
+
+.The_Markers p {
+    font-size: 14px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    color: #555555;
+}
+
+.The_Markers span {
+    position: relative;
+    top: -10px;
+    font-size: 12px;
+    line-height: 1em;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    color: #888;
+}
+
+.Mk_img {
+    opacity: 0;
+    position: absolute;
+    top: -220px;
+    left: 600px;
+    width: 350px;
+    height: 350px;
+    transition: opacity 0.3s ease; 
+}
+
+.The_Markers:hover .Mk_img {
+    opacity: 1;
+}
+
+.Archive .Introducing {
+    position: relative;
+    top: 150px;
+    left: 350px;
+    cursor: pointer;
+}
+
+.Introducing p {
+    font-size: 14px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    color: #555555;
+}
+
+.Introducing span {
+    position: relative;
+    top: -10px;
+    font-size: 12px;
+    line-height: 1em;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    color: #888;
+}
+
+.It_img {
+    opacity: 0;
+    position: absolute;
+    top: -332px;
+    left: 600px;
+    width: 300px;
+    height: 450px;
+    transition: opacity 0.3s ease; 
+}
+
+.Introducing:hover .It_img {
+    opacity: 1;
+}
+
+.slider-container2 {
+    position: absolute;
+    top: 3305px;
+    left: 300px;
+    width: 592px;
+    height: 690px;
+    overflow: hidden;
+    position: relative;
+}
+
+.slider2 {
+    display: flex;
+    transition: transform 1s ease;
+}
+
+.slide2 {
+    min-width: 100%;
+    height: 100%;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.Intro {
+    position: absolute;
+    top: 4880px;
+    left: 1000px;
+}
+
+.Intro h1 {
+    color: #888888;
+    font-size: 20px;
+    font-family: "Roboto", sans-serif; 
+    font-weight: 300;
+}
+
+.Intro p {
+    color: #111111;
+    font-size: 14px;
+    font-family: "Roboto", sans-serif; 
+    line-height: 20px;
+    font-weight: 300;
+}
+
+.Intro a {
+    position: relative;
+    top: 50px;
+    color: #111111;
+    font-size: 12px;
+    font-family: "Roboto", sans-serif; 
+    text-transform: uppercase;
+    line-height: 15px;
+}
+
+.footer {
+    position: absolute;
+    top: 6000px;
+    height: 300px;
+}
+
+.info h1 {
+    position: relative;
+    left: 500px;
+    font-size: 11px;
+    font-family: "Roboto", sans-serif; 
+    text-transform: uppercase;
+    color: #888888;
+    font-weight: 400;
+}
+
+.info ul li {
+    list-style: none;
+}
+
+.info p {
+    position: relative;
+    top: 20px;
+    left: 460px;
+    font-size: 11px;
+    font-family: "Roboto", sans-serif; 
+    color: #111111;
+}
+
+.contact {
+    position: absolute;
+    top: 10px;
+    left: 900px;
+}
+
+.contact h1 {
+    font-size: 11px;
+    color: #888888;
+    font-family: "Roboto", sans-serif; 
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.contact ul li {
+    list-style: none;
+}
+
+.contact p {
+    position: relative;
+    top: 20px;
+    left: -40px;
+    width: 150px;
+    font-size: 11px;
+    color: #111111;
+    font-family: "Roboto", sans-serif;
+    line-height: 18px; 
+}
+
+.social {
+    position: absolute;
+    top: 10px;
+    left: 1300px;
+}
+
+.social h1 {
+    font-size: 11px;
+    color: #888888;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.social ul li {
+    list-style: none;
+}
+
+.social p {
+    position: relative;
+    top: 20px;
+    left: -40px;
+    font-size: 11px;
+    color: #111111;
+    font-family: "Roboto", sans-serif;
+}
