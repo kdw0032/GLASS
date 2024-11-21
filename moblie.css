@@ -1,4 +1,12 @@
-@media screen and (max-width:400px) {
+@media screen and (max-width:600px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    .header {
+        width: 100vw;
+    }
+    
     .header .logo {
         position: relative;
         top: 30px;
@@ -376,7 +384,7 @@
         position: absolute;
         top: -200px;
         left: -50px;
-        width: 390px;
+        width: 100vw;
         height: 1000px;
         transition: opacity 1.5s ease; 
         z-index: 1;
@@ -417,7 +425,7 @@
         position: absolute;
         top: -400px;
         left: -50px;
-        width: 390px;
+        width: 100vw;
         height: 1000px;
         transition: opacity 0.3s ease;
         filter: brightness(0.6); /* 이미지 밝기 60% */
@@ -460,7 +468,7 @@
         position: absolute;
         top: -520px;
         left: -50px;
-        width: 390px;
+        width: 100vw;
         height: 1000px;
         filter: brightness(0.6); /* 이미지 밝기 50% */
         transition: opacity 0.3s ease; 
@@ -501,7 +509,7 @@
         position: absolute;
         top: -742px;
         left: -50px;
-        width: 390px;
+        width: 100vw;
         height: 1000px;
         transition: opacity 0.3s ease;
         z-index: 1; 
@@ -522,4 +530,455 @@
         top: 5350px;
         left: 40px;
     }
+
+    #footer {
+        display: none;
+    }
+
+    /*모바일 사이즈 전용 footer 적용함*/ 
+
+    .m_dropdown {
+        display: block;
+        position: relative;
+        top: 3200px;
+        left: 15px;
+        transition: all 300ms;
+        display: flex;
+        flex-direction: column;
+        min-height: 58px;
+        background-color: white;
+        overflow: hidden;
+        max-width: 298px;
+        min-width: 298px;
+    }
+
+    .m_dropdown input:where(:checked) ~ .list {
+        opacity: 1;
+        transform: translateY(-3rem) scale(1);
+        transition: all 500ms ease;
+        margin-top: 32px;
+        padding-top: 4px;
+        margin-bottom: -32px;
+    }
+
+    .m_dropdown input:where(:not(:checked)) ~ .list {
+        opacity: 0;
+        transform: translateY(3rem);
+        margin-top: -100%;
+        user-select: none;
+        height: 0px;
+        max-height: 0px;
+        min-height: 0px;
+        pointer-events:none;
+        transition: all 500ms ease-out;
+    }
+
+    .trigger {
+        cursor: pointer;
+        list-style: none;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+        font-weight: 600;
+        color: inherit;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-flow: row;
+        gap: 1rem;
+        padding: 1rem;
+        height: max-content;
+        position: relative;
+        z-index: 99;
+       
+    }
+
+    .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border-width: 0;
+    }
+
+    .m_dropdown input:where(:checked) + .trigger {
+        margin-bottom: 1rem;
+    }
+
+    .m_dropdown input:where(:checked) + .trigger:before {
+        rotate: 90deg;
+        transition-delay: 0ms;
+    }
+
+    .m_dropdown input:where(:checked) + .trigger::after {
+        content: "INFORMATION";
+        position: relative;
+        left: -15px;
+        font-family: "Roboto", sans-serif;
+        font-weight: 300;
+        font-size: 11px;
+        color: #555555;
+    }
+
+    .trigger:before,
+    .trigger::after {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .trigger::before {
+        content: "›";
+        rotate: -90deg;
+        width: 17px;
+        height: 17px;
+        color: #262626;
+        border-radius: 2px;
+        font-size: 18px;
+        transition: all 350ms ease;
+        transition-delay: 85ms;
+    }
+
+    .trigger::after {
+        position: relative;
+        left: -15px;
+        content: "INFORMATION";
+        font-family: "Roboto", sans-serif;
+        font-weight: 300;
+        font-size: 11px;
+        color: #555555;
+    }
+
+    .list {
+        height: 100%;
+        max-height: 20rem;
+        width: calc(100% - calc(var(--w-scrollbar) / 2));
+        display: grid;
+        grid-auto-flow: row;
+        overflow: hidden auto;
+        gap: 1rem;
+        padding: 0 1rem;
+        margin-right: -8px;
+    }
+
+    .listitem {
+        height: 100%;
+        width: calc(100% + calc(calc(var(--w-scrollbar) / 2 + var(--w-scrollbar))));
+        list-style: none;
+        font-size: 11px;
+        color: #111111;
+        font-family: "Roboto", sans-serif;
+        font-weight: 400;
+    }
+
+    .m_dropdown2 {
+        position: relative;
+        top: 3200px;
+        left: 15px;
+        transition: all 300ms;
+        display: flex;
+        flex-direction: column;
+        min-height: 58px;
+        background-color: white;
+        overflow: hidden;
+        max-width: 298px;
+        min-width: 298px;
+    }
+
+    .m_dropdown2 input:where(:checked) ~ .list {
+        opacity: 1;
+        transform: translateY(-3rem) scale(1);
+        transition: all 500ms ease;
+        margin-top: 32px;
+        padding-top: 4px;
+        margin-bottom: -32px;
+    }
+
+    .m_dropdown2 input:where(:not(:checked)) ~ .list {
+        opacity: 0;
+        transform: translateY(3rem);
+        margin-top: -100%;
+        user-select: none;
+        height: 0px;
+        max-height: 0px;
+        min-height: 0px;
+        pointer-events:none;
+        transition: all 500ms ease-out;
+    }
+
+    .trigger2 {
+        cursor: pointer;
+        list-style: none;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+        font-weight: 600;
+        color: inherit;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-flow: row;
+        gap: 1rem;
+        padding: 1rem;
+        height: max-content;
+        position: relative;
+        z-index: 99;
+       
+    }
+
+    .sr-only2 {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border-width: 0;
+    }
+
+    .m_dropdown2 input:where(:checked) + .trigger2{
+        margin-bottom: 1rem;
+    }
+
+    .m_dropdown2 input:where(:checked) + .trigger2:before {
+        rotate: 90deg;
+        transition-delay: 0ms;
+    }
+
+    .m_dropdown2 input:where(:checked) + .trigger2::after {
+        content: "CONTACT";
+        position: relative;
+        left: -15px;
+        font-family: "Roboto", sans-serif;
+        font-weight: 300;
+        font-size: 11px;
+        color: #555555;
+    }
+
+    .trigger2:before,
+    .trigger2::after {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .trigger2::before {
+        content: "›";
+        rotate: -90deg;
+        width: 17px;
+        height: 17px;
+        color: #262626;
+        border-radius: 2px;
+        font-size: 18px;
+        transition: all 350ms ease;
+        transition-delay: 85ms;
+    }
+
+    .trigger2::after {
+        position: relative;
+        left: -15px;
+        content: "CONTACT";
+        font-family: "Roboto", sans-serif;
+        font-weight: 300;
+        font-size: 11px;
+        color: #555555;
+    }
+
+    .list{
+        height: 100%;
+        max-height: 20rem;
+        width: calc(100% - calc(var(--w-scrollbar) / 2));
+        display: grid;
+        grid-auto-flow: row;
+        overflow: hidden auto;
+        gap: 1rem;
+        padding: 0 1rem;
+        margin-right: -8px;
+    }
+
+    .listitem {
+        height: 100%;
+        width: calc(100% + calc(calc(var(--w-scrollbar) / 2 + var(--w-scrollbar))));
+        list-style: none;
+        font-size: 11px;
+        color: #111111;
+        font-family: "Roboto", sans-serif;
+        font-weight: 400;
+    }
+
+    .m_dropdown3 {
+        position: relative;
+        top: 3200px;
+        left: 15px;
+        transition: all 300ms;
+        display: flex;
+        flex-direction: column;
+        min-height: 58px;
+        background-color: white;
+        overflow: hidden;
+        max-width: 298px;
+        min-width: 298px;
+    }
+
+    .m_dropdown3 input:where(:checked) ~ .list {
+        opacity: 1;
+        transform: translateY(-3rem) scale(1);
+        transition: all 500ms ease;
+        margin-top: 32px;
+        padding-top: 4px;
+        margin-bottom: -32px;
+    }
+
+    .m_dropdown3 input:where(:not(:checked)) ~ .list {
+        opacity: 0;
+        transform: translateY(3rem);
+        margin-top: -100%;
+        user-select: none;
+        height: 0px;
+        max-height: 0px;
+        min-height: 0px;
+        pointer-events:none;
+        transition: all 500ms ease-out;
+    }
+
+    .trigger3 {
+        cursor: pointer;
+        list-style: none;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+        font-weight: 600;
+        color: inherit;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-flow: row;
+        gap: 1rem;
+        padding: 1rem;
+        height: max-content;
+        position: relative;
+        z-index: 99;
+       
+    }
+
+    .sr-only3 {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border-width: 0;
+    }
+
+    .m_dropdown3 input:where(:checked) + .trigger3{
+        margin-bottom: 1rem;
+    }
+
+    .m_dropdown3 input:where(:checked) + .trigger3:before {
+        rotate: 90deg;
+        transition-delay: 0ms;
+    }
+
+    .m_dropdown3 input:where(:checked) + .trigger3::after {
+        content: "SOCIAL";
+        position: relative;
+        left: -15px;
+        font-family: "Roboto", sans-serif;
+        font-weight: 300;
+        font-size: 11px;
+        color: #555555;
+    }
+
+    .trigger3:before,
+    .trigger3::after {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .trigger3::before {
+        content: "›";
+        rotate: -90deg;
+        width: 17px;
+        height: 17px;
+        color: #262626;
+        border-radius: 2px;
+        font-size: 18px;
+        transition: all 350ms ease;
+        transition-delay: 85ms;
+    }
+
+    .trigger3::after {
+        position: relative;
+        left: -15px;
+        content: "SOCIAL";
+        font-family: "Roboto", sans-serif;
+        font-weight: 300;
+        font-size: 11px;
+        color: #555555;
+    }
+
+    .list{
+        height: 100%;
+        max-height: 20rem;
+        width: calc(100% - calc(var(--w-scrollbar) / 2));
+        display: grid;
+        grid-auto-flow: row;
+        overflow: hidden auto;
+        gap: 1rem;
+        padding: 0 1rem;
+        margin-right: -8px;
+    }
+
+    .listitem {
+        height: 100%;
+        width: calc(100% + calc(calc(var(--w-scrollbar) / 2 + var(--w-scrollbar))));
+        list-style: none;
+        font-size: 11px;
+        color: #111111;
+        font-family: "Roboto", sans-serif;
+        font-weight: 400;
+        cursor: pointer;
+    }
+
+    .listitem:hover {
+        color: #888888;
+    }
+
+    .f_sectionB1 {
+        position: relative;
+        top: 3300px;
+        left: 35px;
+        font-size: 11px;
+        color: #111111;
+        font-family: "Roboto", sans-serif;
+        font-weight: 400;
+    }
+
+    .f_sectionB2 a {
+        display: block;
+        text-align: right;
+        position: relative;
+        top: 3230px;
+        text-decoration: none;
+        font-size: 11px;
+        font-family: "Roboto", sans-serif;
+        font-weight: 400;
+        color: #888888;
+        line-height: 20px;
+        text-transform: uppercase;
+    }
+    
 }

@@ -48,6 +48,10 @@ body {
     .dropdown .m_header_login_search {
         display: none;
     }
+
+    .m_footer {
+        display: none;
+    }
 }
   /* 드롭다운 스타일 */
 
